@@ -1,0 +1,6 @@
+<div *ngFor="let menu of menuList">
+  <p>{{ menu|json}}</p>
+  <button (click)="deleteMenu(menu.id)">DELETE</button>
+  <button routerLink="/menu/edit/{{menu.id}}">EDIT</button>
+  
+</div>

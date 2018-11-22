@@ -1,0 +1,30 @@
+<form [formGroup]="menuForm" (ngSubmit)="onSubmit(menuForm.value)" novalidate>
+  <!-- <div>
+    <input type="number" formControlName = "id" >
+  </div>  -->
+<h2>ADD MENU</h2>
+<div></div>
+<div formGroupName = "details">
+  <h4>Details</h4>
+  <div>MenuName
+    <input type="text" formControlName = "menuName">
+  </div>
+  <div>Quantity
+    <input type="number" formControlName= "quantity">
+  </div>
+  <div>Price
+    <input type="number" formControlName ="price">
+  </div>
+</div>
+
+  <div formGroupName = "address">
+    <h4>Address</h4>
+      <div>City
+      <input type="text" formControlName="city">
+    </div>
+    <div>PinCode
+      <input type="number" formControlName = "pinCode">
+    </div>
+  </div>
+  <button type="submit" [disabled] = "!menuForm.valid">SUBMIT</button>
+</form>
